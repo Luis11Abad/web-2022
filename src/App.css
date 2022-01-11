@@ -1,0 +1,80 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+h2, h2 *, .logo {
+  font-family: 'DM Serif Display', serif;
+}
+.logo {
+  font-size: 38px;
+}
+.logo span {
+  font-size: 72px;
+}
+.frame {
+  height: 14rem;
+  width: 10rem;
+  border-radius: 1rem;
+}
+.move {
+  transform: translate(18px, 0) rotate(6deg);
+  animation: move 20s infinite;
+}
+.move:nth-child(1){
+  animation-delay: 10s;
+}
+.scroll-link {
+  letter-spacing: 2px;
+}
+.scroll-link::before {
+  content: 'MORE ABOUT ME';
+  position: absolute;
+  letter-spacing: 2px;
+  left: 1px;
+  width: 100%;
+  color: #59647b;
+}
+.process:nth-child(odd):not(:last-child)::before {
+  content: '';
+  position: absolute;
+  height: 55px;
+  width: 1px;
+  bottom: -61px;
+  right: calc(25% - 5px);
+  border-left: 2px dashed #1d53ff;
+}
+.process:nth-child(even):not(:last-child)::before {
+  content: '';
+  position: absolute;
+  height: 101%;
+  width: 56%;
+  top: 58px;
+  left: -57%;
+  border-top: 2px dashed #1d53ff;
+  border-left: 2px dashed #1d53ff;
+}
+@media screen and (min-width: 1024px) {
+  .frame {
+    height: 24rem;
+    width: 21rem;
+    border-radius: 1.8rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .frame {
+    height: 28rem;
+    width: 24rem;
+    border-radius: 2.2rem;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(5%, 0) rotate(6deg);
+  }
+  50% {
+    transform: translate(-5%, 5%) rotate(6deg);
+  }
+  100% {
+    transform: translate(5%, 0) rotate(6deg);
+  }
+}
